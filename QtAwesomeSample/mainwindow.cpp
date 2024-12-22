@@ -54,6 +54,14 @@ MainWindow::MainWindow(QWidget *parent) :
         toggleButton->setIcon( awesome->icon("fa_solid square-check", options));
     }
 
+    // a simple label
+    //=========================
+    {
+        QLabel* rocketLabel = ui->rocketLabel;
+        rocketLabel->setText(QChar(fa::fa_rocket));
+        rocketLabel->setFont(awesome->font(fa::fa_solid, 16));
+    }
+
     QStandardItemModel* model = new QStandardItemModel(this);
     ui->listView->setModel(model);
 
